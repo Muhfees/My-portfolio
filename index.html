@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jane Doe - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body> 
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Muhfeesur Rahman
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          muhfees2002@gmail.com
+        </div>
+        <div style="clear:both;"></div>
+        <div class="contact_info">
+          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          +94755814901
+
+        </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#skill">Skills</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#recomendation">Recomendation</a>  
+        
+          <!-- Add the links for Skills, Projects and Recommendation here -->
+
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://cdn.pixabay.com/photo/2015/07/31/15/01/man-869215_1280.jpg" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Muhfeesur Rahman! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
+          </h1>
+          <p>
+            I am a full stack developer with 2 years of experience in both application and presentation layers.
+            I have worked on applications and microservices deployed on IBM Cloud. 
+            I am an avid user of IBM Watson Services and have worked on Watson Assistant, NLU, Sentiment analyzer to name a few.
+          </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h6>HTML</h6>
+          <p>2 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg"/>
+          <h6>JavaScript</h6>
+          <p>3 years experience</p>
+        </div>  
+
+        <div class="skill">
+            <img src="html_finalprojimages/java.png"/>
+            <h6>Java</h6>
+            <p>5 years experience</p>
+        </div> 
+
+        <div class="skill">
+            <img src="html_finalprojimages/react.png/">
+            <h6>React</h6>
+            <p>4 years experience</p>
+        </div> 
+
+        <div class="skill">
+            <img src="html_finalprojimages/node.png/">
+            <h6>Node JS</h6>
+            <p>4 years experience</p>
+        </div> 
+        
+        <div class="skill">
+            <img src="html_finalprojimages/CSS3.png/">
+            <h6>CSS</h6>
+            <p>4 years experience</p>
+        </div> 
+
+        <!-- Add more skills here -->
+
+
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>Task Management App</h3>
+            <ul>
+              <li>A full-stack task management web app to create, assign, and track tasks collaboratively in teams. Users can register/login, create projects, manage tasks with statuses, priorities, deadlines, and comments. The app integrates a Java microservice that performs advanced analytics on tasks (e.g., workload forecasts, productivity reports) asynchronously.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Modern E-commerce Web Application</h3>
+            <ul>
+              <li>A sleek e-commerce platform for browsing products, managing a shopping cart, and placing orders. The frontend is a React SPA. Backend has Node.js Express APIs for product catalog and order handling. The payment processing and order fulfillment logic is handled by a Java microservice, simulating integration with external payment gateways and warehouse operations.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Real-Time Chat Application</h3>
+            <ul>
+              <li> A web-based chat app that supports instant messaging between users. The React frontend provides a clean, modern interface with real-time message updates and notifications.</li>
+            </ul>
+          </div>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <textarea id="new_recommendation"></textarea>
+      <div id="all_recommendations"></div>
+      <div id="popup">Thank you for your recommendation!</div>
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          "This task management app transformed how our team organizes work, combining seamless React UI with powerful Java analytics — boosting our productivity and collaboration effortlessly."
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          The e-commerce platform’s intuitive design and responsive React frontend, backed by Node and Java microservices, provided a smooth shopping experience that significantly increased our customer satisfaction and sales.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          "The real-time chat app’s sleek interface and instant messaging capabilities, powered by Node.js and Java moderation services, created a reliable and engaging communication tool for our entire organization."
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Add Recommendation</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+        <!--Add the code here for the logo to appear and the icon to be actionable-->
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3><!-- Add appropriate text here--></h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
